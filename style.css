@@ -19,6 +19,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 3rem;
+    padding: 1rem;
 }
 
 .controls, .settings {
@@ -50,15 +52,58 @@ body {
     align-items: center;
 }
 
+.first-row {
+    display: flex;
+    grid-row: 1 / 2;
+    padding: 1rem;
+    gap: 1rem;
+    align-items: center;
+}
+
+.second-row {
+    display: flex;
+    grid-row: 2 / 3;
+    padding: 1rem;
+    gap: 1rem;
+    align-items: center;
+}
+
+.searchbar {
+    flex-grow: 1;
+}
+
+.searchbar input {
+    width: 30vw;
+    height: 3vh;
+    border-radius: 1rem;
+    border: 1px solid black;
+    padding-left: 1rem;
+}
+
+.first-row .avatar img {
+    height: 6vh;
+}
+
+.second-row .image img {
+    height: 10vh;
+}
+
+.second-row .section {
+    flex: 1;
+}
+
+.second-row .section span {
+    font-size: 2rem;
+}
+
 .setting {
     flex: 1;
 }
 
 .header {
-    background-color: blue;
     grid-area: 1 / 2 / 2 / 3;
     display: grid;
-    grid-template-rows: 1fr 2fr;
+    grid-template-rows: 1fr 1.5fr;
 }
 
 .dashboard {
