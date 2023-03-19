@@ -55,7 +55,9 @@ body {
 .first-row {
     display: flex;
     grid-row: 1 / 2;
-    padding: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1rem;
     gap: 1rem;
     align-items: center;
 }
@@ -63,7 +65,9 @@ body {
 .second-row {
     display: flex;
     grid-row: 2 / 3;
-    padding: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 1rem;
     gap: 1rem;
     align-items: center;
 }
@@ -104,21 +108,88 @@ body {
     grid-area: 1 / 2 / 2 / 3;
     display: grid;
     grid-template-rows: 1fr 1.5fr;
+    box-shadow: 5px 5px 10px grey;
 }
 
 .dashboard {
-    background-color: grey;
+    background-color: rgba(198, 203, 221, 0.514);
     grid-area: 2 / 2 / 3 / 3;
     display: grid;
+    grid-template-rows: auto 1fr;
     grid-template-columns: 3fr 1fr;
 }
 
 .cards {
-    background-color: aqua;
-    grid-area: 1 / 1 / 2 / 2
+    grid-area: 2 / 1 / 3 / 2;
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding-left: 2rem;
+    padding-bottom: 2rem;
+    padding-right: 2rem;
+}
+
+.card {
+    background-color: white;
+    border-left: solid rgb(221, 137, 11) 3px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 5px 5px 10px grey;
+    border-radius: 1rem;
+    position: relative;
+    top: 0;
+    transition: top ease 0.5s;
+}
+
+.card:hover {
+    top: -10px;
+
+}
+
+.share {
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+    gap: 1rem;
+    margin-top: auto;
 }
 
 .highlights {
-    background-color: green;
+    grid-area: 2 / 2 / 3 / 3;
+    padding-bottom: 2rem;
+    padding-right: 2rem;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 2rem;
+    padding-right: 2rem;
+    justify-content: flex-start;
+}
+
+#projects {
+    grid-area: 1 / 1 / 2 / 2;
+    padding-left: 2rem;
+    font-size: 1.5rem;
+}
+
+#announcements {
     grid-area: 1 / 2 / 2 / 3;
+    font-size: 1.5rem;
+}
+
+.trending {
+    display: flex;
+}
+
+#trending {
+    font-size: 1.5rem;
+}
+
+.highlights .card {
+    flex-grow: 1;
+    max-height: 400px;
+}
+
+.trending .avatar img {
+    height: 6vh;
 }
