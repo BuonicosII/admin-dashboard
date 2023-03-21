@@ -30,11 +30,12 @@ body {
     flex-direction: column;
     gap: 3vh;
     font-size: 1rem;
+
 }
 
 .leftpanel {
     display: flex;
-    height: 4vh;
+    height: 3vh;
 }
 
 .leftpanel .image {
@@ -45,7 +46,7 @@ body {
 }
 
 .image img {
-    height: 4vh;
+    height: 3vh;
 }
 
 
@@ -104,7 +105,7 @@ body {
     font-size: 2rem;
 }
 
-.setting {
+.settings {
     flex: 1;
 }
 
@@ -225,4 +226,18 @@ button {
 
 button:hover {
     filter: brightness(130%);
+}
+
+.role {
+    color: gray;
+}
+
+hr {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+#credit {
+    padding-left: 1rem;
+    font-weight: 100;
 }
